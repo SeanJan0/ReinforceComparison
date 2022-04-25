@@ -1,6 +1,6 @@
-[submodule "NEAT/NEAT/Pytorch-NEAT"]
-	path = NEAT/NEAT/Pytorch-NEAT
-	url = git@github.com:uber-research/PyTorch-NEAT.git
 [submodule "NEAT/PyTorch-Neat"]
 	path = NEAT/PyTorch-Neat
 	url = git@github.com:uber-research/PyTorch-NEAT.git
+[submodule "NEAT/TensorFlow-NEAT"]
+	path = NEAT/TensorFlow-NEAT
+	url = git@github.com:crisbodnar/TensorFlow-NEAT.git
