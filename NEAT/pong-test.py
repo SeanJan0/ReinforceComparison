@@ -4,9 +4,9 @@ import gym
 from EnvEvaluator import EnvEvaluator
 
 #General Config Parameters
-generations = 10 #Number of Generations to run
+generations = 100 #Number of Generations to run
 max_env_steps = None #Maximum number of steps, None=Inf (Often Regulated within the simulation)
-min_score = -10 #Minimum score the AI can achieve before the system resets
+min_score = None #Minimum score the AI can achieve before the system resets
 train_env = gym.make("ALE/Pong-ram-v5") #Gym Environemnt
 disp_env = gym.make("ALE/Pong-ram-v5", render_mode='human') #Gym Environemnt for displaying gameplay
 
