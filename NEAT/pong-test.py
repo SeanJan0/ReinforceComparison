@@ -7,8 +7,8 @@ from EnvEvaluator import EnvEvaluator
 generations = 100 #Number of Generations to run
 max_env_steps = None #Maximum number of steps, None=Inf (Often Regulated within the simulation)
 min_score = None #Minimum score the AI can achieve before the system resets
-train_env = gym.make("ALE/Pong-ram-v5") #Gym Environemnt
-disp_env = gym.make("ALE/Pong-ram-v5", render_mode='human') #Gym Environemnt for displaying gameplay
+train_env = gym.make("ALE/Pong-v5") #Gym Environemnt
+disp_env = gym.make("ALE/Pong-v5", render_mode='human') #Gym Environemnt for displaying gameplay
 
 def activate(net, states):
     """Evaluates the input net at the given state for the Pong-V5 Environment"""
@@ -29,5 +29,5 @@ if __name__ == '__main__':
     local_dir = os.path.dirname(__file__)
     config_path = os.path.join(local_dir, 'pong.cfg')
     prefix = 'NEAT/checkpoints/Pong-v5/neat-checkpoint-'
-    evaluator = EnvEvaluator(train_env, activate, disp_env=disp_env, max_env_steps=max_env_steps, min_env_score=min_score,checkpoint_prefix=prefix, threads=10)
+    evaluator = EnvEvaluator(train_env, activate, disp_env=disp_env, max_env_steps=max_env_steps, min_env_score=min_score,checkpoint_prefix=prefix, threads=None)
     evaluator.run(config_path, generations)
