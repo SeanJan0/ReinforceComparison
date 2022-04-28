@@ -1,3 +1,4 @@
+from matplotlib.pyplot import gray
 import numpy as np
 import os
 import gym
@@ -28,6 +29,6 @@ if __name__ == '__main__':
                              max_env_steps=max_env_steps, 
                              min_env_score=min_score,
                              ram_indicies = ram_indexes,
-                             threads=8)
-    checkpoint = 'NEAT/checkpoints/Junk-Test/neat-checkpoint-199'
+                             threads=10)
+    checkpoint = 'NEAT/checkpoints/Pong-ram-v5/neat-checkpoint-1999'
     evaluator.eval_checkpoint_genome(config_path, checkpoint)
