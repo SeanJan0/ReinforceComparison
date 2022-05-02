@@ -4,7 +4,7 @@ import gym
 from EnvEvaluator import EnvEvaluator
 
 #General Config Parameters
-generations = 100 #Number of Generations to run
+generations = 250  #Number of Generations to run
 max_env_steps = None #Maximum number of steps, None=Inf (Often Regulated within the simulation)
 env = gym.make('MountainCar-v0') #Gym Environemnt
 

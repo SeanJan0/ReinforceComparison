@@ -4,7 +4,7 @@ import gym
 from EnvEvaluator import EnvEvaluator
 
 #General Config Parameters
-generations = 100 #Number of Generations to run
+generations = 250 #Number of Generations to run
 max_env_steps = None #Maximum number of steps, None=Inf
 env = gym.make('CartPole-v1') #Gym Environemnt
 

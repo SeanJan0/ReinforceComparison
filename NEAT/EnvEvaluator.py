@@ -177,7 +177,7 @@ class EnvEvaluator:
                 state = self.disp_env.reset()
                 for action in actions:
                     # self.disp_env.render()
-                    state, reward, done, info = self.disp_env.step(random.randint(0,3))
+                    state, reward, done, info = self.disp_env.step(int(action))
                     fitness2+=reward
                     if done:
                         print("DONE")
@@ -193,7 +193,7 @@ class EnvEvaluator:
         fitnesses = np.zeros(np.shape(genomes)[0])
         i = 0
         for genome_id, genome in genomes:
-            print("{}%".format(round(i/len(genomes)*100, 2)), end='\r')
+            # print("{}%".format(round(i/len(genomes)*100, 2)), end='\r')
             fitness = self.eval_genome(genome, config)
             # print(type(fitness))
             genome.fitness = int(fitness)
